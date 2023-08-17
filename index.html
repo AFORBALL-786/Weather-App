@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- top level container -->
+    <div class="wrapper">
+        <h1> Weather App</h1>
+
+        <!-- Tab Menu -->
+        <div class="tab-menu">
+
+            <!-- Your Weather -->
+            <p class="tab" data-userWeather>Your Weather</p>
+
+            <!-- Search Weather -->
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <!-- weather-container  (4 screen) -->
+        <div class="weather-container">
+            <!--1 grant location Screen -->
+            <div class="for-center grant-location">
+                <img src="./assets/location.png" width="80" height="80" alt="Location" loading="lazy">
+                <h2>Grant Location Acccess</h2>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- 2 Search Weather Form-->
+            <form class=" search-form" data-searchForm>
+                <input placeholder="Search for City..." data-searchInput>
+                <button class="btn">
+                    <img src="./assets/search.png" loading="lazy" width="20" height="20">
+                </button>
+            </form>
+
+            <!-- 3 loading screen  -->
+            <div class="for-center loading-container">
+                <img src="./assets/loading.gif" width="100" height="100">
+                <p>Loading</p>
+            </div>
+
+            <!-- 4 Display Weather Info -->
+            <div class="for-center display-info">
+                <!-- City Name and Flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryFlag>
+
+                </div>
+                
+                <div class="khatra">
+                    <!-- Weather Description -->
+                    <p data-weatherDes></p>
+                    
+                    <!-- WeatherIcon -->
+                    <img data-weatherIcon>
+                    
+                    
+                </div>
+
+                <!-- Temperature -->
+                <p data-tempr></p>
+                
+                <!-- 3 cards parameter -->
+                <div class="parameter-container">
+                    <!-- card1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png" >
+                        <p>Windspeed</p>
+                        <p data-wind></p>
+                    </div>
+
+                    <!-- card2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png">
+                        <p>Clouds</p>
+                        <p data-cloud></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
